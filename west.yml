@@ -5,11 +5,11 @@ manifest:
       url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
-      repo-path: app
+      remote: zmkfirmware
       revision: main
-      path: zmk
+      import: app/west.yml
     - name: corneV3-ZMK
-      repo-path: corneV3-ZMK
+      remote: zmkfirmware
       revision: main
       path: boards/shields/corne
   self:
