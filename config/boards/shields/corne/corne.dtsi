@@ -52,7 +52,7 @@
 	// TODO: per-key RGB node(s)?
 };
 
-/*
+
 &pro_micro_i2c {
 	status = "okay";
 
@@ -72,4 +72,3 @@
 		prechargep = <0x22>;
 	};
 };
-*/
