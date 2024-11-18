@@ -14,7 +14,8 @@ endif
 
 # Si el escudo es "corne_right"
 if SHIELD_CORNE_RIGHT
+
     config ZMK_SPLIT
         default y
-		
+
 endif
