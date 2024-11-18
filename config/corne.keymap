@@ -154,7 +154,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         };
 
         // -----------------------------------------------------------------------------------------
-                            |     |     |     |     |     |     |  
+|  
         // 3 phim Lower+Raise+Backspace bat/tat che do khoa phim
         lock_layer {
             bindings = <
