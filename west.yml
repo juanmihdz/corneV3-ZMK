@@ -1,0 +1,16 @@
+manifest:
+  version: 0.7
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+  projects:
+    - name: zmk
+      repo-path: app
+      revision: main
+      path: zmk
+    - name: corneV3-ZMK
+      repo-path: corneV3-ZMK
+      revision: main
+      path: boards/shields/corne
+  self:
+    path: config
