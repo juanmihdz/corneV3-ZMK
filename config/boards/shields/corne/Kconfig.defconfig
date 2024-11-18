@@ -1,3 +1,4 @@
+# Si el escudo es "corne_left"
 if SHIELD_CORNE_LEFT
 
 config ZMK_KEYBOARD_NAME
@@ -11,6 +12,7 @@ config ZMK_SPLIT
 
 endif
 
+# Si el escudo es "corne_right"
 if SHIELD_CORNE_RIGHT
     config ZMK_SPLIT
         default y

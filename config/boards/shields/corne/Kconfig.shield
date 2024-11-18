@@ -1,5 +1,7 @@
+# Definir si el escudo izquierdo "corne_left" está activo
 config SHIELD_CORNE_LEFT
-    def_bool $(shields_list_contains,corne_left)
+    def_bool y
 
+# Definir si el escudo derecho "corne_right" está activo
 config SHIELD_CORNE_RIGHT
-    def_bool $(shields_list_contains,corne_right)
+    def_bool y
