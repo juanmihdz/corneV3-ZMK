@@ -19,3 +19,5 @@ if SHIELD_CORNE_RIGHT
         default y
 
 endif
+
+endif
