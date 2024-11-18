@@ -30,7 +30,7 @@ acción de mantener presionada.
 Por lo tanto, la principal diferencia entre &mt y &kt es que &mt está limitado a los modificadores para la acción de 
 mantener presionada, mientras que &kt puede asignar cualquier comportamiento a la acción de mantener presionada.
 */
-
+/*
 &mmv {    
         time-to-max-speed-ms = <1000>;
         acceleration-exponent=<1>;
@@ -39,6 +39,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         time-to-max-speed-ms = <2000>;
         acceleration-exponent=<0>;
 }; 
+*/
 / {
     behaviors {
         ht: hold-tap {
