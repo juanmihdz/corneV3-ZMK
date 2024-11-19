@@ -1,4 +1,4 @@
-ZMK_UNICODE_PAIR(es_c_cedilla,       N0, N0, E, N7,   N0, N0, C, N7)  // ç/Ç
+ZMK_UNICODE_PAIR(es_c_cedilla,       N0, N0, E, N7,   N0, N0, C, N7)
 ZMK_UNICODE_SINGLE(es_corchete_izq,    N0, N0, N5, B);
 ZMK_UNICODE_SINGLE(es_corchete_der,    N0, N0, N5, D);
 
