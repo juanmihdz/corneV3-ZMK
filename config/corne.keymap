@@ -10,8 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #include "zmk-helpers/helper.h"
-#include "corneV3-ZMK/unicode-chars/spanish.dtsi"
-#include "corneV3-ZMK/config/unicode-chars/spanish.dtsi"
+#include "unicode-chars/spanish.dtsi"
 
 #define LOWER 1
 #define RAISE 2
