@@ -51,15 +51,15 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             tapping-term-ms = <50>;
             bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
         };
-        coma_ptCom: coma_ptCom { //generico
+        coma_ptCom: coma_ptCom { //, ;
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp COMMA>, <&kp LT>;
         };
-        pt_2pt: pt_2pt { //generico
+        pt_2pt: pt_2pt { //. :
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp DOT>, <&kp GT>;
         };
