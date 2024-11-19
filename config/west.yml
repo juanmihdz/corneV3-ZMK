@@ -15,6 +15,9 @@ manifest:
     - name: zmk-helpers
       remote: urob
       revision: main
+    - name: corneV3-ZMK
+      remote: juanmihdz
+      revision: main
     # - name: corneV3-ZMK
     #   remote: juanmihdz
     #   revision: main
