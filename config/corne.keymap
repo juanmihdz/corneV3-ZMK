@@ -133,7 +133,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             compatible = "zmk,behavior-macro";
             label = "macro para escribir punto y coma";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT &kp COMMA>;
+            bindings = <&kp LS(COMMA)>;
         };
     };
     
