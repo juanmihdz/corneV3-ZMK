@@ -142,7 +142,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             bindings = <
                 &kp F1  &kp F2                  &kp F3          &kp F4      &kp F5  &kp F6                  &kp F7          &kp F8  &kp F9     &kp F10     &kp F11   &kp F12
                 &trans  &kp C_AL_TEXT_EDITOR    &kp C_AL_CALC   &kp C_AL_DB &trans  &trans                  &none           &none   &kp LBKT   &kp RBKT    &es_corchete_izq   &es_corchete_der
-                &trans  &kp LT                  &kp GT          &trans      &trans  &trans                  &none           &none   &kp LBRC   &es_c_cedilla    &es_llave_izq   &es_llave_der
+                &trans  &menor_que                  &mayor_que          &trans      &trans  &trans                  &none           &none   &kp LBRC   &es_c_cedilla    &es_llave_izq   &es_llave_der
                                                                 &kp RALT    &trans  &macro1                 &passVeridata   &trans  &trans
             >;
         };
