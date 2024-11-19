@@ -5,11 +5,16 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: juanmihdz
       url-base: https://github.com/juanmihdz
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-helpers
+      remote: urob
+      revision: main
     # - name: corneV3-ZMK
     #   remote: juanmihdz
     #   revision: main

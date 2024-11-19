@@ -9,6 +9,11 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#include "zmk-helpers/helper.h"
+
+ZMK_UNICODE_PAIR(es_c_cedilla, N0, N0, E, N7, N0, N0, C, N7);  // Define el par de Unicode para ç/Ç
+
+
 #define LOWER 1
 #define RAISE 2
 #define SHIFT 3
@@ -149,7 +154,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         // Default Layer
         // |ESC/TAB|  Q  |  W  |  E  |  R  |  T  |       |  Y  |  U  |  I  |  O  |  P  | BKSP/DEL |
         // | TD0   |  A  |  S  |  D  |  F  |  G  |       |  H  |  J  |  K  |  L  |  Ñ  |   ´¨{}   |
-        // | LCTRL |  Z  |  X  |  C  |  V  |  B  |       |  N  |  M  |  ,; |  .: |  -_ |   '/?    |
+        // | LCTRL |  Z  |  X  |  C  |  V  |  B  |       |  N  |  M  |  ,; |  .: |  -_ |    '?    |
         //                     | ALT | TD2 | SPC |       | ENT | LGUI| TD3 |
         default_layer {
             bindings = <
@@ -178,7 +183,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             bindings = <
                 &kp F1  &kp F2                  &kp F3          &kp F4      &kp F5  &kp F6                  &kp F7          &kp F8  &kp F9     &kp F10     &kp F11   &kp F12
                 &trans  &kp C_AL_TEXT_EDITOR    &kp C_AL_CALC   &kp C_AL_DB &trans  &trans                  &none           &none   &kp LBKT   &kp RBKT    &mLBKT    &mRBKT
-                &trans  &kp LT                  &kp GT          &trans      &trans  &trans                  &none           &none   &kp LBRC   &kp RBRC    &mLBRC    &kp RA(RBRC)
+                &trans  &kp LT                  &kp GT          &trans      &trans  &trans                  &none           &none   &kp LBRC   &macro es_c_cedilla    &mLBRC    &kp RA(RBRC)
                                                                 &kp RALT    &trans  &macro1                 &passVeridata   &trans  &trans
             >;
         };
