@@ -82,13 +82,6 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
-
-        coma_ptCom: coma_ptCom {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp COMMA>, <&macro_coma_ptCom>;
-        };
     };
     
     conditional_layers {
@@ -112,13 +105,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             label = "pass-veridata";
             #binding-cells = <0>;
             bindings = <&kp CAPSLOCK &kp A &kp B &kp C &kp D &kp MINUS &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp CAPSLOCK>;
-        };    
-        macro_coma_ptCom: macro_coma_ptCom {
-            compatible = "zmk,behavior-macro";
-            label = "pass-veridata";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT &kp COMMA>;
-        };     
+        };  
     };
     
     keymap {
@@ -138,9 +125,9 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         };
 		// number arrows and media
         // Layer Lower - Number pad and media keys
-        // |ESC/TAB|  1   |  2   |  3   |  4   |  5   |       | &none |  6   |  7   |  8   |  9   |  0   | BKSP |
-        // | &none | VOL+ | VOL- | MUTE | &none| &none|       | &none |  UP  | &none| &none| &none| &none| DEL  |
-        // | &none | REW  |  FF  | PLAY | HOME | END  |       | &none | LEFT | DOWN | RGHT |  .   | &none| PRINT|
+        // |ESC/TAB|  1   |  2   |  3   |  4   |  5   |       | &none |  6   |  7   |  8   |  9   |  0   | BKSP/DEL |
+        // | &none | VOL+ | VOL- | MUTE | &none| &none|       | &none |  UP  | &none| &none| &none| &none| DEL      |
+        // | &none | REW  |  FF  | PLAY | HOME | END  |       | &none | LEFT | DOWN | RGHT |  .   | &none| PRINT    |
         //                       | &none| &none| &none|       | &none | RALT | &none|
         layer_lower {
             bindings = <
