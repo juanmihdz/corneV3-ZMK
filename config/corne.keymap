@@ -126,7 +126,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             compatible = "zmk,behavior-macro";
             label = "macro RBRC";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp RBRC>;
+            bindings = <&kp RIGHT_ALT &kp A>;
         };
         
     };
