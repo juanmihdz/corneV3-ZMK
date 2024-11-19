@@ -117,13 +117,13 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             compatible = "zmk,behavior-macro";
             label = "macro RBRC";
             #binding-cells = <0>;
-            bindings = <&kp LALT &kp KP_N1 &kp LALT &kp KP_N2 &kp LALT &kp KP_N5>;
+            bindings = <&kp RA(RBKT)>;
         };
         nESP: nESP {
             compatible = "zmk,behavior-macro";
             label = "macro nESP";
             #binding-cells = <0>;
-            bindings = <&kp RALT &kp NUMBER_4 &kp N>;
+            bindings = <&kp RA(NUMBER_4) &kp N>;
         };
     };
     
@@ -150,8 +150,8 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         //                       | &none| &none| &none|       | &none | RALT | &none|
         layer_lower {
             bindings = <
-                &ht ESC TAB &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3        &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
-                &trans      &kp C_VOL_UP    &kp C_VOLUME_DOWN    &kp C_MUTE          &none       &none                       &none       &kp UP      &none        &none          &none       &kp DELETE
+                &ht ESC wwww &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3        &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
+                &trans      &kp   C_VOLUME_DOWN  &kp C_VOL_UP    &kp C_MUTE          &none       &none                       &none       &kp UP      &none        &none          &none       &kp DELETE
                 &trans      &ht C_RW C_PREV &ht C_FF C_NEXT &kp C_PLAY_PAUSE    &kp HOME    &kp END                     &kp LEFT    &kp DOWN    &kp RIGHT    &ht COLON DOT  &trans      &kp PRINTSCREEN
                                                             &trans              &trans      &trans                      &trans      &kp RALT    &trans 
             >;
