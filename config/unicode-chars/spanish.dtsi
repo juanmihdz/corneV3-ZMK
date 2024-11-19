@@ -1,5 +1,5 @@
 ZMK_UNICODE_PAIR(es_c_cedilla, U00E7, U00C7);
-ZMK_UNICODE_SINGLE(lt_bracket, U005B);  // '['
-ZMK_UNICODE_SINGLE(rt_bracket, U005D);  // ']'
-ZMK_UNICODE_SINGLE(lt_brace, U007b);    // '{'
-ZMK_UNICODE_SINGLE(rt_brace, U007d);    // '}'
+ZMK_UNICODE_PAIR(lt_bracket, U005B);  // '['
+ZMK_UNICODE_PAIR(rt_bracket, U005D);  // ']'
+ZMK_UNICODE_PAIR(lt_brace, U007b);    // '{'
+ZMK_UNICODE_PAIR(rt_brace, U007d);    // '}'
