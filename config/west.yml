@@ -12,10 +12,12 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-helpers
+      remote: urob
+      revision: main
     - name: corneV3-ZMK
       remote: juanmihdz
       revision: main
-      path: config/unicode-chars
     # - name: corneV3-ZMK
     #   remote: juanmihdz
     #   revision: main
