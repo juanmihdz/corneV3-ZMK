@@ -123,28 +123,22 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             compatible = "zmk,behavior-macro";
             label = "macro RBKT";
             #binding-cells = <0>;
-            bindings = <&kp LALT &kp KP_N9 &kp LALT &kp KP_N3>;
+            bindings = <&kp LALT &kp KP_N9 &kp LALT &kp KP_N1>;
         };
         mLBRC: mLBRC {
             compatible = "zmk,behavior-macro";
             label = "macro LBRC";
             #binding-cells = <0>;
-            bindings = <&kp LALT &kp KP_N1 &kp LALT &kp KP_N2 &kp LALT &kp KP_N3>;
+            bindings = <&kp RALT &kp LBRC>;
         };
         
         mRBRC: mRBRC {
             compatible = "zmk,behavior-macro";
             label = "macro RBRC";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp A>;
+            bindings = <&kp RIGHT_ALT &kp RBRC>;
         };
         
-        m_L_COMMA: m_L_COMMA {
-            compatible = "zmk,behavior-macro";
-            label = "macro para escribir punto y coma";
-            #binding-cells = <0>;
-            bindings = <&kp LS(COMMA)>;
-        };
     };
     
     keymap {
@@ -180,8 +174,8 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         layer_raise {
             bindings = <
                 &kp F1  &kp F2                  &kp F3          &kp F4      &kp F5  &kp F6                  &kp F7          &kp F8  &kp F9     &kp F10     &kp F11   &kp F12
-                &trans  &kp C_AL_TEXT_EDITOR    &kp C_AL_CALC   &kp C_AL_DB &trans  &trans                  &none           &none   &kp LBKT   &kp RBKT    &es_corchete_izq    &es_corchete_der
-                &trans  &kp LT                  &kp GT          &trans      &trans  &trans                  &none           &none   &kp LBRC   &es_c_cedilla    &kp A    &kp A
+                &trans  &kp C_AL_TEXT_EDITOR    &kp C_AL_CALC   &kp C_AL_DB &trans  &trans                  &none           &none   &kp LBKT   &kp RBKT    &mLBKT   &mRBKT
+                &trans  &kp LT                  &kp GT          &trans      &trans  &trans                  &none           &none   &kp LBRC   &es_c_cedilla    &mLBRC   &mRBRC
                                                                 &kp RALT    &trans  &macro1                 &passVeridata   &trans  &trans
             >;
         };

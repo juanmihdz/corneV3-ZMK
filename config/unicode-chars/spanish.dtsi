@@ -1,6 +1,6 @@
 ZMK_UNICODE_PAIR(es_c_cedilla,       N0, N0, E, N7,   N0, N0, C, N7)  // ç/Ç
-ZMK_UNICODE_SINGLE(es_corchete_izq,    N0, N0, E, N7)  // [ 
-ZMK_UNICODE_SINGLE(es_corchete_der,    N0, N0, D, N7)  // ] 
+ZMK_UNICODE_SINGLE(es_corchete_izq,    N0, N0, E, N7);
+ZMK_UNICODE_SINGLE(es_corchete_der,    N0, N0, D, N7);
 
-// ZMK_UNICODE_PAIR(es_llave_izq, U00E7, U00C7);
-// ZMK_UNICODE_PAIR(es_llave_der, U00E7, U00C7);
+ZMK_UNICODE_SINGLE(es_llave_izq,   N0, N0, B, N7);
+ZMK_UNICODE_SINGLE(es_llave_der,   N0, N0, D, N7);
