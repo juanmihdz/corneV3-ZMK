@@ -1,5 +1,5 @@
 ZMK_UNICODE_PAIR(es_c_cedilla, U00E7, U00C7);
-ZMK_UNICODE_SINGLE(lt_bracket, N0, N0, E, N7, N0, N0, L, N7);  // Define el par de Unicode para '['
-ZMK_UNICODE_SINGLE(rt_bracket, N0, N0, E, N7, N0, N0, R, N7);  // Define el par de Unicode para ']'
-ZMK_UNICODE_SINGLE(lt_brace, N0, N0, E, N7, N0, N0, C, N7);    // Define el par de Unicode para '{'
-ZMK_UNICODE_SINGLE(rt_brace, N0, N0, E, N7, N0, N0, O, N7);    // Define el par de Unicode para '}'
+ZMK_UNICODE_SINGLE(lt_bracket, 0x005B);  // '['
+ZMK_UNICODE_SINGLE(rt_bracket, 0x005D);  // ']'
+ZMK_UNICODE_SINGLE(lt_brace, 0x007B);    // '{'
+ZMK_UNICODE_SINGLE(rt_brace, 0x007D);    // '}'
