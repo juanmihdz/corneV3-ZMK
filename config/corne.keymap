@@ -180,8 +180,8 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         layer_raise {
             bindings = <
                 &kp F1  &kp F2                  &kp F3          &kp F4      &kp F5  &kp F6                  &kp F7          &kp F8  &kp F9     &kp F10     &kp F11   &kp F12
-                &trans  &kp C_AL_TEXT_EDITOR    &kp C_AL_CALC   &kp C_AL_DB &trans  &trans                  &none           &none   &kp LBKT   &kp RBKT    &mLBKT    &mRBKT
-                &trans  &kp LT                  &kp GT          &trans      &trans  &trans                  &none           &none   &kp LBRC   &es_c_cedilla    &mLBRC    &kp RA(RBRC)
+                &trans  &kp C_AL_TEXT_EDITOR    &kp C_AL_CALC   &kp C_AL_DB &trans  &trans                  &none           &none   &kp LBKT   &kp RBKT    &lt_bracket    &rt_bracket
+                &trans  &kp LT                  &kp GT          &trans      &trans  &trans                  &none           &none   &kp LBRC   &es_c_cedilla    &lt_brace    &rt_brace
                                                                 &kp RALT    &trans  &macro1                 &passVeridata   &trans  &trans
             >;
         };
