@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define LOWER 1
 #define RAISE 2
@@ -31,14 +30,6 @@ Por lo tanto, la principal diferencia entre &mt y &kt es que &mt está limitado 
 mantener presionada, mientras que &kt puede asignar cualquier comportamiento a la acción de mantener presionada.
 */
 
-&mmv {    
-        time-to-max-speed-ms = <1000>;
-        acceleration-exponent=<1>;
-};
-&mwh {    
-        time-to-max-speed-ms = <2000>;
-        acceleration-exponent=<0>;
-}; 
 / {
     behaviors {
         ht: hold-tap {
@@ -57,27 +48,29 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
         };
-
+/*
         td1: tap_dance { //generico
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&kp >, <&kp >;
         };
-
+        
+        tambien mirar &reset
+*/
         td2:tap_dance_toggle_capa{
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&tog LOWER>, <&tog OPTION>;
-        }
+        };
 
         td3:tap_dance_mo_toggle{
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo RAISE>, <&tog LOCK>;
-        }
+        };
     };
     
     conditional_layers {
@@ -157,13 +150,12 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             bindings = <
                 &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                &trans  &trans          &trans      &kp C_BRI_DN        &kp C_BRI_UP     &tog LOCK
                 &trans      &trans          &trans          &trans          &trans          &trans                      &trans  &trans          &trans      &trans   &trans &trans
-                &trans      &trans          &trans          &trans          &trans          &trans                      &reset  &trans          &trans      &trans   &trans &trans
+                &trans      &trans          &trans          &trans          &trans          &trans                      &trans  &trans          &trans      &trans   &trans &trans
                                                             &trans          &trans          &ext_power EP_TOG           &trans  &rgb_ug RGB_TOG &out OUT_TOG 
             >;
         };
 
         // -----------------------------------------------------------------------------------------
-                            |     |     |     |     |     |     |  
         // 3 phim Lower+Raise+Backspace bat/tat che do khoa phim
         lock_layer {
             bindings = <

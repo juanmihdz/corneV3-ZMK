@@ -1,13 +1,24 @@
 manifest:
+  version: 0.7
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    - name: juanmihdz
+      url-base: https://github.com/juanmihdz
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: corneV3-ZMK
+      remote: juanmihdz
+      revision: main
+      path: unicode-chars/
+    # - name: corneV3-ZMK
+    #   remote: juanmihdz
+    #   revision: main
+    #   path: boards/shields/corne
   self:
     path: config
