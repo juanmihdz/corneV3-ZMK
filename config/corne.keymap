@@ -95,27 +95,27 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             #binding-cells = <0>;
             bindings = <&kp LSFT &kp A &kp LSFT &kp B &kp LSFT &kp C &kp LSFT &kp D &kp UNDER &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4>;
         };
-        LEFT_BRACKET: LEFT_BRACKET {
+        mLBKT: mLBKT {
             compatible = "zmk,behavior-macro";
-            label = "LEFT_BRACKET";
+            label = "macro LBKT";
             #binding-cells = <0>;
             bindings = <&kp LALT &kp KP_9 &kp LALT &kp KP_1>;
         };
-        RIGHT_BRACKET: RIGHT_BRACKET {
+        mRBKT: mRBKT {
             compatible = "zmk,behavior-macro";
-            label = "RIGHT_BRACKET";
+            label = "macro RBKT";
             #binding-cells = <0>;
             bindings = <&kp LALT &kp KP_9 &kp LALT &kp KP_3>;
         };
-        LEFT_BRACE: LEFT_BRACE {
+        mLBRC: mLBRC {
             compatible = "zmk,behavior-macro";
-            label = "LEFT_BRACE";
+            label = "macro LBRC";
             #binding-cells = <0>;
             bindings = <&kp LALT &kp KP_1 &kp LALT &kp KP_2 &kp LALT &kp KP_3>;
         };
-        RIGHT_BRACE: RIGHT_BRACE {
+        mRBRC: mRBRC {
             compatible = "zmk,behavior-macro";
-            label = "RIGHT_BRACE";
+            label = "macro RBRC";
             #binding-cells = <0>;
             bindings = <&kp LALT &kp KP_1 &kp LALT &kp KP_2 &kp LALT &kp KP_5>;
         };
@@ -153,9 +153,9 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 
         layer_raise {
             bindings = <
-                &kp F1  &kp F2                  &kp F3          &kp F4      &kp F5  &kp F6                  &kp F7          &kp F8  &kp F9  &kp F10     &kp F11     &kp F12
-                &trans  &kp C_AL_TEXT_EDITOR    &kp C_AL_CALC   &kp C_AL_DB &trans  &trans                  &none           &none   &kp LBKT   &kp RBKT       &LEFT_BRACKET   &RIGHT_BRACKET
-                &trans  &kp LT                  &kp GT          &trans      &trans  &trans                  &none           &none   &kp LBRC   &kp RBRC       &LEFT_BRACE       &RIGHT_BRACE
+                &kp F1  &kp F2                  &kp F3          &kp F4      &kp F5  &kp F6                  &kp F7          &kp F8  &kp F9     &kp F10     &kp F11   &kp F12
+                &trans  &kp C_AL_TEXT_EDITOR    &kp C_AL_CALC   &kp C_AL_DB &trans  &trans                  &none           &none   &kp LBKT   &kp RBKT    &mLBKT    &mRBKT
+                &trans  &kp LT                  &kp GT          &trans      &trans  &trans                  &none           &none   &kp LBRC   &kp RBRC    &mLBRC    &mRBRC
                                                                 &kp RALT    &trans  &macro1                 &passVeridata   &trans  &trans
             >;
         };
