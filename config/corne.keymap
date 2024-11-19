@@ -87,7 +87,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp COMMA>, <&kp LSHFT &kp COMMA>;
+            bindings = <&kp COMMA>, <&macro_coma_ptCom>;
         };
     };
     
@@ -112,7 +112,13 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             label = "pass-veridata";
             #binding-cells = <0>;
             bindings = <&kp CAPSLOCK &kp A &kp B &kp C &kp D &kp MINUS &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp CAPSLOCK>;
-        };        
+        };    
+        macro_coma_ptCom: macro_coma_ptCom {
+            compatible = "zmk,behavior-macro";
+            label = "pass-veridata";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT &kp COMMA>;
+        };     
     };
     
     keymap {
