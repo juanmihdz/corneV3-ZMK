@@ -51,11 +51,17 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             tapping-term-ms = <50>;
             bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
         };
-        td1: tap_dance { //generico
+        coma_ptCom: coma_ptCom { //generico
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp COMMA>, <&kp LT>;
+        };
+        pt_2pt: pt_2pt { //generico
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOT>, <&kp GT>;
         };
         
 /*
@@ -119,7 +125,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             bindings = <
                 &ht ESC TAB &kp Q       &kp W       &kp E       &kp R   &kp T               &kp Y       &kp U       &kp I           &kp O           &kp P       &bspc_del
                 &td0        &kp A       &kp S       &kp D       &kp F   &kp G               &kp H       &kp J       &kp K           &kp L           &kp SEMI    &kp SQT
-                &kp LCTRL   &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       &td1 COMMA LT      &td1 DOT GT        &kp SLASH   &kp MINUS
+                &kp LCTRL   &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       &coma_ptCom      &pt_2pt        &kp SLASH   &kp MINUS
                                                     &kp LALT    &td2    &kp SPACE           &kp ENTER   &kp LGUI    &td3
             >;
         };
