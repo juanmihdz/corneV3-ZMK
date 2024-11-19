@@ -15,7 +15,7 @@ manifest:
     - name: corneV3-ZMK
       remote: juanmihdz
       revision: main
-      path: unicode-chars/
+      path: config/unicode-chars
     # - name: corneV3-ZMK
     #   remote: juanmihdz
     #   revision: main
