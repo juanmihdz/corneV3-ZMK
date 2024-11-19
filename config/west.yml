@@ -10,5 +10,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    # - name: corneV3-ZMK
+    #   remote: juanmihdz
+    #   revision: main
+    #   path: boards/shields/corne
   self:
     path: config
