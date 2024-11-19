@@ -71,6 +71,14 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             tapping-term-ms = <200>;
             bindings = <&mo RAISE>, <&tog LOCK>;
         };
+
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
     };
     
     conditional_layers {
@@ -117,7 +125,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             compatible = "zmk,behavior-macro";
             label = "macro RBRC";
             #binding-cells = <0>;
-            bindings = <&kp RA(RBKT)>;
+            bindings = <&kp RA(RBRC)>;
         };
         nESP: nESP {
             compatible = "zmk,behavior-macro";
@@ -136,8 +144,8 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         //                     | ALT | TD2 | SPC |       | ENT | LGUI| TD3 |
         default_layer {
             bindings = <
-                &ht ESC TAB     &kp Q       &kp W       &kp E       &kp R   &kp T               &kp Y       &kp U       &kp I           &kp O           &kp P       &kp BACKSPACE
-                &td0        &kp A       &kp S       &kp D       &kp F   &kp G               &kp H       &kp J       &kp K           &kp L           &nESP      &ht DELETE SQT
+                &ht ESC TAB     &kp Q       &kp W       &kp E       &kp R   &kp T               &kp Y       &kp U       &kp I           &kp O           &kp P       &bspc_del
+                &td0        &kp A       &kp S       &kp D       &kp F   &kp G               &kp H       &kp J       &kp K           &kp L           &nESP      &kp SQT
                 &kp LCTRL   &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       &ht SEMI COMMA  &ht COLON DOT   &kp SLASH   &kp MINUS
                                                     &kp LALT    &td2    &kp SPACE           &kp ENTER   &kp LGUI    &td3
             >;
@@ -150,8 +158,8 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         //                       | &none| &none| &none|       | &none | RALT | &none|
         layer_lower {
             bindings = <
-                &ht ESC &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3        &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
-                &trans      &kp   C_VOLUME_DOWN  &kp C_VOL_UP    &kp C_MUTE          &none       &none                       &none       &kp UP      &none        &none          &none       &kp DELETE
+                &ht ESC &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3        &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp trans
+                &trans      &kp   C_VOLUME_DOWN  &kp C_VOL_UP    &kp C_MUTE          &none       &none                       &none       &kp UP      &none        &none          &none       &none
                 &trans      &ht C_RW C_PREV &ht C_FF C_NEXT &kp C_PLAY_PAUSE    &kp HOME    &kp END                     &kp LEFT    &kp DOWN    &kp RIGHT    &ht COLON DOT  &trans      &kp PRINTSCREEN
                                                             &trans              &trans      &trans                      &trans      &kp RALT    &trans 
             >;
