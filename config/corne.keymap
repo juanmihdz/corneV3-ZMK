@@ -79,6 +79,13 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
+
+        coma_ptCom: coma_ptCom {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp COMMA>, <&kp LSHFT &kp COMMA>;
+        };
     };
     
     conditional_layers {
@@ -148,7 +155,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             bindings = <
                 &ht ESC TAB &kp Q       &kp W       &kp E       &kp R   &kp T               &kp Y       &kp U       &kp I           &kp O           &kp P                   &bspc_del
                 &td0        &kp A       &kp S       &kp D       &kp F   &kp G               &kp H       &kp J       &kp K           &kp L           &kp SEMI                &kp SQT
-                &kp LCTRL   &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       &ht m_L_COMMA COMMA  &ht L DOT   &kp SLASH  &kp MINUS
+                &kp LCTRL   &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       &coma_ptCom  &ht L DOT   &kp SLASH  &kp MINUS
                                                     &kp LALT    &td2    &kp SPACE           &kp ENTER   &kp LGUI    &td3
             >;
         };
