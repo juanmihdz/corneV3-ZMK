@@ -10,9 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #include "zmk-helpers/helper.h"
-
-ZMK_UNICODE_PAIR(es_c_cedilla, N0, N0, E, N7, N0, N0, C, N7);  // Define el par de Unicode para ç/Ç
-
+#include "zmk-helpers/unicode-chars/spanish.dtsi"
 
 #define LOWER 1
 #define RAISE 2
