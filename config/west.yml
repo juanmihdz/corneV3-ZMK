@@ -13,8 +13,9 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-helpers
-      remote: urob
+      remote: juanmihdz
       revision: main
+      path: unicode-chars/
     # - name: corneV3-ZMK
     #   remote: juanmihdz
     #   revision: main
