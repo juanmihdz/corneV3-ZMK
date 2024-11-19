@@ -114,7 +114,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         };
 		// number arrows and media
         // Layer Lower - Number pad and media keys
-        // |ESC/TAB|  N1  |  N2  |  N3  |  N4  |  N5  |       | &none |  N6  |  N7  |  N8  |  N9  |  N0  | BKSP |
+        // |ESC/TAB|  1   |  2   |  3   |  4   |  5   |       | &none |  6   |  7   |  8   |  9   |  0   | BKSP |
         // | &none | VOL+ | VOL- | MUTE | &none| &none|       | &none |  UP  | &none| &none| &none| &none| DEL  |
         // | &none | REW  |  FF  | PLAY | HOME | END  |       | &none | LEFT | DOWN | RGHT |  .   | &none| PRINT|
         //                       | &none| &none| &none|       | &none | RALT | &none|
