@@ -1,5 +1,5 @@
 ZMK_UNICODE_PAIR(es_c_cedilla, U00E7, U00C7);
-ZMK_UNICODE_PAIR(es_corchete_izq, U005B, U00E7);  
-ZMK_UNICODE_PAIR(es_corchete_der, U005D, U00E7);  
-ZMK_UNICODE_PAIR(es_llave_izq, U007b, U00E7);    
-ZMK_UNICODE_PAIR(es_llave_der, U007d, U00E7);   
+ZMK_UNICODE_PAIR(es_corchete_izq, U00E7, U00C7); 
+ZMK_UNICODE_PAIR(es_corchete_der, U00E7, U00C7); 
+ZMK_UNICODE_PAIR(es_llave_izq, U00E7, U00C7);
+ZMK_UNICODE_PAIR(es_llave_der, U00E7, U00C7);
