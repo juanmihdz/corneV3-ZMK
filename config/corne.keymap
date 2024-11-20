@@ -49,7 +49,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         // Toggle layers
         tl: tl{
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&tog LOWER>, <&tog OPTION>;
