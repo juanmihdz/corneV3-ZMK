@@ -37,60 +37,60 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
     behaviors {
         // Hold-tap behavior
         ht: ht {
-            compatible = "zmk,behavior-hold-tap"
-            #binding-cells = <2>
-            tapping-term-ms = <170>
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
             //flavor = "tap-preferred"; por defecto en situaciones ambiguas que haga el hold
             bindings =
                 <&kp>,
-                <&kp>
+                <&kp>;
         };
 
         // Toggle layers
         tl: tl{
-            compatible = "zmk,behavior-hold-tap"
-            #binding-cells = <2>
-            flavor = "tap-preferred"                
-            tapping-term-ms = <350>                  // Tiempo para determinar entre tap y hold
-            bindings = <&tog>, <&tog>  // Capa Lower para tap, Capa Options para hold
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";                
+            tapping-term-ms = <350>;                // Tiempo para determinar entre tap y hold
+            bindings = <&tog>, <&tog>;  // Capa Lower para tap, Capa Options para hold
         };
 
         // Tap dance CAPSLOCK
         td0: td0 {
-            compatible = "zmk,behavior-tap-dance"
-            #binding-cells = <0>
-            tapping-term-ms = <170>
-            bindings = <&kp LSHFT>, <&kp CAPSLOCK>
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <170>;
+            bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
         };
         //, ;
         td1: td1 { 
-            compatible = "zmk,behavior-tap-dance"
-            #binding-cells = <0>
-            tapping-term-ms = <200>
-            bindings = <&kp COMMA>, <&kp LT>
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp COMMA>, <&kp LT>;
         };
         //. :
         td2: td2 { 
-            compatible = "zmk,behavior-tap-dance"
-            #binding-cells = <0>
-            tapping-term-ms = <200>
-            bindings = <&kp DOT>, <&kp GT>
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOT>, <&kp GT>;
         };
 
         // Raise, Lock
         td3:td3{
-            compatible = "zmk,behavior-tap-dance"
-            #binding-cells = <0>
-            tapping-term-ms = <200>
-            bindings = <&mo RAISE>, <&tog LOCK>
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo RAISE>, <&tog LOCK>;
         };
         
         //. ,
         td4: td4 {
-            compatible = "zmk,behavior-tap-dance"
-            #binding-cells = <0>
-            tapping-term-ms = <200>
-            bindings = <&kp DOT>, <&kp COMMA>
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOT>, <&kp COMMA>;
         };
         
         //TAB ESCAPE
@@ -103,11 +103,11 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 
         // Backspace Delete
         mod1: mod1 {
-            compatible = "zmk,behavior-mod-morph"
-            #binding-cells = <0>
-            bindings = <&kp BACKSPACE>, <&kp DELETE>
-            mods = <(MOD_LSFT|MOD_RSFT)>
-            keep-mods = <(MOD_RSFT)>
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
     };
     
@@ -122,14 +122,14 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 	
     macros {
         macro1: macro1 {
-            compatible = "zmk,behavior-macro"
-            #binding-cells = <0>
-            bindings = <&kp LALT &kp F4>
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp F4>;
         };
         passVeridata: passVeridata {
-            compatible = "zmk,behavior-macro"
-            #binding-cells = <0>
-            bindings = <&kp CAPSLOCK &kp A &kp B &kp C &kp D &kp CAPSLOCK &kp QUESTION &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4>
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPSLOCK &kp A &kp B &kp C &kp D &kp CAPSLOCK &kp QUESTION &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4>;
         }; 
     };
     
@@ -200,7 +200,6 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             >
             //&ext_power EP_TOG  &none          &bootloader           &bootloader  &rgb_ug RGB_TOG &out OUT_TOG 
         };
-
         // -----------------------------------------------------------------------------------------
         // Layer LOCK
         // | &none | &none | &none | &none | &none | &none |       | &none | &none | &none | &none | &none | &none |
