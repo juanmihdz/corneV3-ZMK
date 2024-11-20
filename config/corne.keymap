@@ -53,7 +53,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             flavor = "tap-preferred";                
             tapping-term-ms = <200>;                  // Tiempo para determinar entre tap y hold
             quick-tap-ms = <200>;                     // Tiempo de espera para un tap rápido
-            bindings = <&tog LOWER, <&tog OPTIONS>;  // Capa Lower para tap, Capa Options para hold
+            bindings = <&tog LOWER>, <&tog OPTIONS>;  // Capa Lower para tap, Capa Options para hold
         };
 
         // Tap dance CAPSLOCK
