@@ -111,14 +111,14 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         };
     };
     
-    conditional_layers {
-        // compatible = "zmk,conditional-layers";
+    // conditional_layers {
+    //     compatible = "zmk,conditional-layers";
 
-        // tri_layer {
-        //     if-layers = <LOWER RAISE>;
-        //     then-layer = <OPTION>;
-        // };
-    };
+    //     tri_layer {
+    //         if-layers = <LOWER RAISE>;
+    //         then-layer = <OPTION>;
+    //     };
+    // };
 	
     macros {
         macro1: macro1 {
@@ -129,7 +129,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         passVeridata: passVeridata {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &kp A &kp B &kp C &kp D &kp QUESTION &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp CAPSLOCK>;
+            bindings = <&kp CAPSLOCK &kp A &kp B &kp C &kp D &kp CAPSLOCK &kp QUESTION &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4>;
         }; 
     };
     
