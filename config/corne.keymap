@@ -103,7 +103,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         // Backspace Delete
         mod1: mod1 {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
