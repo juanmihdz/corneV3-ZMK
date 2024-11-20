@@ -51,8 +51,8 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             tapping-term-ms = <200>;
             //flavor = "tap-preferred"; por defecto en situaciones ambiguas que haga el hold
             bindings =
-                <&tog>,
-                <&tog>;
+                <&tog 1>, // LOWER
+                <&tog 4>; // OPTION
         };
 
         td0: tap_dance_CAPSLOCK {
