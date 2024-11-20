@@ -35,8 +35,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 
 / {
     behaviors {
-        // Hold-tap behavior
-        ht: ht {
+        ht: hold-tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -45,79 +44,73 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
                 <&kp>,
                 <&kp>;
         };
-
-        // Toggle layers
-        tl: tl{
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tog LOWER>, <&kp OPTION>;
-        };
-
-        // Tap dance CAPSLOCK
-        td0: td0 {
+        td0: tap_dance_CAPSLOCK {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
         };
-        //, ;
-        td1: td1 { 
+        coma_ptCom: coma_ptCom { //, ;
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp COMMA>, <&kp LT>;
         };
-        //. :
-        td2: td2 { 
+        pt_2pt: pt_2pt { //. :
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp DOT>, <&kp GT>;
         };
-
-        // Raise, Lock
-        td3:td3{
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo RAISE>, <&tog LOCK>;
-        };
         
-        //. ,
-        td4: td4 {
+        dotOrCom: dotOrCom { //. :
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp DOT>, <&kp COMMA>;
         };
         
-        //TAB ESCAPE
-        td5:td5{
+/*
+        tambien mirar &reset
+*/
+        tab_escap:tab_escap{
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp TAB>, <&kp ESC>;
         };
 
-        // Backspace Delete
-        mod1: mod1 {
+        td2:tap_dance_toggle_capa{
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tog LOWER>, <&tog OPTION>;
+        };
+
+        td3:tap_dance_mo_toggle{
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo RAISE>, <&tog LOCK>;
+        };
+
+        bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
     };
     
-    // conditional_layers {
-    //     compatible = "zmk,conditional-layers";
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
 
-    //     tri_layer {
-    //         if-layers = <LOWER RAISE>;
-    //         then-layer = <OPTION>;
-    //     };
-    // };
+        tri_layer {
+            if-layers = <LOWER RAISE>;
+            then-layer = <OPTION>;
+        };
+    };
 	
     macros {
         macro1: macro1 {
@@ -128,7 +121,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         passVeridata: passVeridata {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &kp A &kp B &kp C &kp D &kp CAPSLOCK &kp QUESTION &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4>;
+            bindings = <&kp CAPSLOCK &kp A &kp B &kp C &kp D &kp QUESTION &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp CAPSLOCK>;
         }; 
     };
     
@@ -138,13 +131,13 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         // |ESC/TAB|  Q  |  W  |  E  |  R  |  T  |       |  Y  |  U  |  I  |  O  |  P  | BKSP/DEL |
         // | TD0   |  A  |  S  |  D  |  F  |  G  |       |  H  |  J  |  K  |  L  |  Ñ  |   ´¨{}   |
         // | LCTRL |  Z  |  X  |  C  |  V  |  B  |       |  N  |  M  |  ,; |  .: |  -_ |    '?    |
-        //                     | ALT | LW/OPT | SPC |       | ENT | LGUI| TD3 |
+        //                     | ALT | TD2 | SPC |       | ENT | LGUI| TD3 |
         default_layer {
             bindings = <
-                &td5 &kp Q       &kp W       &kp E       &kp R   &kp T               &kp Y       &kp U       &kp I           &kp O           &kp P       &mod1
+                &tab_escap &kp Q       &kp W       &kp E       &kp R   &kp T               &kp Y       &kp U       &kp I           &kp O           &kp P       &bspc_del
                 &td0        &kp A       &kp S       &kp D       &kp F   &kp G               &kp H       &kp J       &kp K           &kp L           &kp SEMI    &kp SQT
-                &kp LCTRL   &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       &td1      &td2        &kp SLASH   &kp MINUS
-                                                    &kp LALT    &tog LOWER   &kp SPACE           &kp ENTER   &kp LGUI    &td3
+                &kp LCTRL   &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       &coma_ptCom      &pt_2pt        &kp SLASH   &kp MINUS
+                                                    &kp LALT    &td2    &kp SPACE           &kp ENTER   &kp LGUI    &td3
             >;
         };
 		// number arrows and media
@@ -155,9 +148,9 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         //                       | &trans| &trans| &trans|       | &trans | RALT | &trans|
         layer_lower {
             bindings = <
-                &td5 &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3        &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
+                &ht ESC TAB &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3        &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
                 &trans      &kp C_VOLUME_DOWN  &kp C_VOL_UP    &kp C_MUTE          &none       &none                       &none       &kp UP      &none        &none          &none       &kp DELETE
-                &trans      &ht C_RW C_PREV &ht C_FF C_NEXT &kp C_PLAY_PAUSE    &kp HOME    &kp END                     &kp LEFT    &kp DOWN    &kp RIGHT    &td4  &trans      &kp PRINTSCREEN
+                &trans      &ht C_RW C_PREV &ht C_FF C_NEXT &kp C_PLAY_PAUSE    &kp HOME    &kp END                     &kp LEFT    &kp DOWN    &kp RIGHT    &dotOrCom  &trans      &kp PRINTSCREEN
                                                             &trans              &trans      &trans                      &trans      &kp RALT    &trans 
             >;
         };
@@ -171,7 +164,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             >;
         };
 
-        layer_shift {
+        Layer_SHIFT {
             bindings = <
                 &kp TILDE        &kp EXCL        &kp AT         &kp HASH       &kp DLLR        &kp PRCNT       &kp CARET       &kp AMPS       &kp KP_MULTIPLY       &kp LPAR       &kp RPAR       &kp UNDERSCORE
                 &trans           &trans          &trans         &trans         &trans          &trans          &trans          &trans         &kp PIPE               &kp COLON      &kp DOUBLE_QUOTES  &kp PLUS
@@ -180,7 +173,8 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             >;
         };
 
-        layer_options {
+
+        Layer_option {
             bindings = <
                 &none  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                &trans  &trans          &trans      &kp C_BRI_DN        &kp C_BRI_UP     &bt BT_CLR
                 &trans      &trans          &trans          &trans          &trans          &trans                      &trans  &trans          &trans      &trans   &trans &trans
