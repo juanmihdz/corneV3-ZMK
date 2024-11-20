@@ -37,60 +37,60 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
     behaviors {
         // Hold-tap behavior
         ht: ht {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            compatible = "zmk,behavior-hold-tap"
+            #binding-cells = <2>
+            tapping-term-ms = <170>
             //flavor = "tap-preferred"; por defecto en situaciones ambiguas que haga el hold
             bindings =
                 <&kp>,
-                <&kp>;
+                <&kp>
         };
 
         // Toggle layers
         tl: tl{
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";                
-            tapping-term-ms = <200>;                  // Tiempo para determinar entre tap y hold
-            bindings = <&tog>, <&tog>;  // Capa Lower para tap, Capa Options para hold
+            compatible = "zmk,behavior-hold-tap"
+            #binding-cells = <2>
+            flavor = "tap-preferred"                
+            tapping-term-ms = <350>                  // Tiempo para determinar entre tap y hold
+            bindings = <&tog>, <&tog>  // Capa Lower para tap, Capa Options para hold
         };
 
         // Tap dance CAPSLOCK
         td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <170>;
-            bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
+            compatible = "zmk,behavior-tap-dance"
+            #binding-cells = <0>
+            tapping-term-ms = <170>
+            bindings = <&kp LSHFT>, <&kp CAPSLOCK>
         };
         //, ;
         td1: td1 { 
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp COMMA>, <&kp LT>;
+            compatible = "zmk,behavior-tap-dance"
+            #binding-cells = <0>
+            tapping-term-ms = <200>
+            bindings = <&kp COMMA>, <&kp LT>
         };
         //. :
         td2: td2 { 
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp DOT>, <&kp GT>;
+            compatible = "zmk,behavior-tap-dance"
+            #binding-cells = <0>
+            tapping-term-ms = <200>
+            bindings = <&kp DOT>, <&kp GT>
         };
 
         // Raise, Lock
         td3:td3{
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo RAISE>, <&tog LOCK>;
+            compatible = "zmk,behavior-tap-dance"
+            #binding-cells = <0>
+            tapping-term-ms = <200>
+            bindings = <&mo RAISE>, <&tog LOCK>
         };
         
         //. ,
         td4: td4 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp DOT>, <&kp COMMA>;
+            compatible = "zmk,behavior-tap-dance"
+            #binding-cells = <0>
+            tapping-term-ms = <200>
+            bindings = <&kp DOT>, <&kp COMMA>
         };
         
         //TAB ESCAPE
@@ -103,11 +103,11 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 
         // Backspace Delete
         mod1: mod1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
+            compatible = "zmk,behavior-mod-morph"
+            #binding-cells = <0>
+            bindings = <&kp BACKSPACE>, <&kp DELETE>
+            mods = <(MOD_LSFT|MOD_RSFT)>
+            keep-mods = <(MOD_RSFT)>
         };
     };
     
@@ -122,22 +122,22 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 	
     macros {
         macro1: macro1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LALT &kp F4>;
+            compatible = "zmk,behavior-macro"
+            #binding-cells = <0>
+            bindings = <&kp LALT &kp F4>
         };
         passVeridata: passVeridata {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &kp A &kp B &kp C &kp D &kp CAPSLOCK &kp QUESTION &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4>;
+            compatible = "zmk,behavior-macro"
+            #binding-cells = <0>
+            bindings = <&kp CAPSLOCK &kp A &kp B &kp C &kp D &kp CAPSLOCK &kp QUESTION &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4>
         }; 
     };
     
     keymap {
-        compatible = "zmk,keymap";
-        // Default Layer
-        // |ESC/TAB|  Q  |  W  |  E  |  R  |  T  |       |  Y  |  U  |  I  |  O  |  P  | BKSP/DEL |
-        // | TD0   |  A  |  S  |  D  |  F  |  G  |       |  H  |  J  |  K  |  L  |  Ñ  |   ´¨{}   |
+        compatible = "zmk,keymap"
+        // Layer Default - QWERTY
+        // |  TAB  |  Q  |  W  |  E  |  R  |  T  |       |  Y  |  U  |  I  |  O  |  P  | BKSP/DEL |
+        // |  TD0  |  A  |  S  |  D  |  F  |  G  |       |  H  |  J  |  K  |  L  |  Ñ  |   ´¨{}   |
         // | LCTRL |  Z  |  X  |  C  |  V  |  B  |       |  N  |  M  |  ,; |  .: |  -_ |    '?    |
         //                     | ALT | LW/OPT | SPC |       | ENT | LGUI| TD3 |
         default_layer {
@@ -146,30 +146,35 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
                 &td0        &kp A       &kp S       &kp D       &kp F   &kp G               &kp H       &kp J       &kp K           &kp L           &kp SEMI    &kp SQT
                 &kp LCTRL   &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       &td1      &td2        &kp SLASH   &kp MINUS
                                                     &kp LALT    &tl OPTIONS LOWER    &kp SPACE           &kp ENTER   &kp LGUI    &td3
-            >;
+            >
         };
-		// number arrows and media
+        // -----------------------------------------------------------------------------------------
         // Layer Lower - Number pad and media keys
-        // |ESC/TAB|  1   |  2   |  3   |  4   |  5   |       | &none |  6   |  7   |  8   |  9   |  0   | BKSP/DEL |
-        // | &none | VOL+ | VOL- | MUTE | &none| &none|       | &none |  UP  | &none| &none| &none| &none| DEL      |
-        // | &none | REW  |  FF  | PLAY | HOME | END  |       | &none | LEFT | DOWN | RGHT |  .,   | &none| PRINT    |
-        //                       | &trans| &trans| &trans|       | &trans | RALT | &trans|
+        // |  ESC  |  1   |  2   |  3   |  4     |  5   |       |  6   |  7   |  8   |  9   |  0   | BKSP/DEL |
+        // | LSHFT | VOL+ | VOL- | MUTE | &none  | &none|       | &none|  UP  | &none| &none| &none| DEL      |
+        // | LCTRL | REW  |  FF  | PLAY | HOME   |  END |       | LEFT | DOWN | RGHT |  .,  | &none| PRINT    |
+        //                       | ALT  | LW/OPT |  SPC |       | ENT  | RALT | RAISE/LOCK |
         layer_lower {
             bindings = <
                 &kp ESCAPE &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3        &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
-                &trans      &kp C_VOLUME_DOWN  &kp C_VOL_UP    &kp C_MUTE          &none       &none                       &none       &kp UP      &none        &none          &none       &kp DELETE
-                &trans      &ht C_RW C_PREV &ht C_FF C_NEXT &kp C_PLAY_PAUSE    &kp HOME    &kp END                     &kp LEFT    &kp DOWN    &kp RIGHT    &td4  &trans      &kp PRINTSCREEN
-                                                            &trans              &trans      &trans                      &trans      &kp RALT    &trans 
-            >;
+                &kp LSHFT  &kp C_VOLUME_DOWN  &kp C_VOL_UP    &kp C_MUTE          &none       &none                       &none       &kp UP      &none        &none          &none       &kp DELETE
+                &kp LCTRL  &ht C_RW C_PREV &ht C_FF C_NEXT &kp C_PLAY_PAUSE    &kp HOME    &kp END                     &kp LEFT    &kp DOWN    &kp RIGHT    &td4  &trans      &kp PRINTSCREEN
+                                                    &kp LALT    &tl OPTIONS LOWER    &kp SPACE           &kp ENTER   &kp RALT    &td3
+            >
         };
-
+        // -----------------------------------------------------------------------------------------
+        // Layer RAISE
+        // |  FN1  |  FN2  |  FN3  |  FN4  |  FN5  |  FN6 |       |  FN7 |  FN8  |  FN9 | FN10 |  FN11 |  FN12 |
+        // | LSHFT | &none | &none | &none | &none | &none|       | &none| &none | `^[  | +*]  |   [   |   ]   |
+        // | LCTRL |   <   |   >   | &none | &none | &none|       |  ¿¡  | &none | &none|  çÇ  |   {   |   }   |
+        //                         |  ALT  | LW/OPT|  SPC |       |  ENT |  RALT | RAISE/LOCK |
         layer_raise {
             bindings = <
                 &kp F1  &kp F2                  &kp F3          &kp F4      &kp F5  &kp F6                  &kp F7          &kp F8  &kp F9     &kp F10     &kp F11   &kp F12
-                &trans  &kp C_AL_TEXT_EDITOR    &kp C_AL_CALC   &kp C_AL_DB &trans  &trans                  &none           &none   &kp LBKT   &kp RBKT    &es_corchete_izq   &es_corchete_der
-                &trans  &menor_que                  &mayor_que          &trans      &trans  &trans          &abre_int_ex           &none   &kp LBRC   &es_c_cedilla    &es_llave_izq   &es_llave_der
-                                                                &kp LALT    &trans  &macro1                 &passVeridata   &kp LGUI  &trans
-            >;
+                &kp LSHFT  &none    &none   &none &none  &none                  &none           &none   &kp LBKT   &kp RBKT    &es_corchete_izq   &es_corchete_der
+                &kp LCTRL  &menor_que                  &mayor_que          &none      &none  &none          &abre_int_ex           &none   &none   &es_c_cedilla    &es_llave_izq   &es_llave_der
+                                                                &kp LALT    &none  &macro1                 &passVeridata   &kp LGUI  &td3
+            >
         };
 
         layer_shift {
@@ -178,27 +183,37 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
                 &trans           &trans          &trans         &trans         &trans          &trans          &trans          &trans         &kp PIPE               &kp COLON      &kp DOUBLE_QUOTES  &kp PLUS
                 &kp PRINTSCREEN  &trans          &trans         &trans         &trans          &trans          &trans          &trans         &trans                &kp LESS_THAN  &kp GREATER_THAN   &kp CAPSLOCK
                                             &trans           &trans          &trans         &trans        &trans             &trans
-            >;
+            >
         };
-
+        // -----------------------------------------------------------------------------------------
+        // Layer OPTIONS
+        // | BT_CLR |  BT0  |  BT1  |  BT2  |  BT3  |  BT4   |       | &none  | &none | &none | &none | &none | &none |
+        // | &none  | &none | &none | &none | &none | &none  |       | &none  | &none | &none | &none | &none | &none |
+        // | &none  | &none | &none | &none | &none | bootldr|       |bootldr | &none | &none | &none | &none | &none |
+        // 
         layer_options {
             bindings = <
-                &none  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                &trans  &trans          &trans      &kp C_BRI_DN        &kp C_BRI_UP     &bt BT_CLR
-                &trans      &trans          &trans          &trans          &trans          &trans                      &trans  &trans          &trans      &trans   &trans &trans
-                &trans      &trans          &trans          &trans          &trans          &trans                      &trans  &trans          &trans      &trans   &trans &trans
-                                                            &ext_power EP_TOG  &trans          &bootloader           &bootloader  &rgb_ug RGB_TOG &out OUT_TOG 
-            >;
+                &bt BT_CLR &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4           &none          &none   &none   &none   &none   &none 
+                &none      &none          &none         &none          &none          &none                  &none          &none   &none   &none   &none   &none
+                &none      &none          &none         &none          &none          &none                  &none          &none   &none   &none   &none   &none
+                                                        &none          &none          &bootloader            &bootloader    &none   &none                                            
+            >
+            //&ext_power EP_TOG  &none          &bootloader           &bootloader  &rgb_ug RGB_TOG &out OUT_TOG 
         };
 
         // -----------------------------------------------------------------------------------------
-        // 3 phim Lower+Raise+Backspace bat/tat che do khoa phim
+        // Layer LOCK
+        // | &none | &none | &none | &none | &none | &none |       | &none | &none | &none | &none | &none | &none |
+        // | &none | &none | &none | &none | &none | &none |       | &none | &none | &none | &none | &none | &none |
+        // | &none | &none | &none | &none | &none | &none |       | &none | &none | &none | &none | &none | &none |
+        //                         | &none | &none | &none |       | &none | &none | RAISE/LOCK |
         lock_layer {
             bindings = <
-                &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &trans
                 &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &none
                 &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &none
-                                                 &none      &trans     &none                            &none      &trans     &trans
-            >;
+                &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &none
+                                                 &none      &none    &none                            &none      &none     &td3
+            >
         };
     };
 };
