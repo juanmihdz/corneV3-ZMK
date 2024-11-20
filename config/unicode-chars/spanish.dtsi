@@ -5,3 +5,4 @@ ZMK_UNICODE_SINGLE(es_llave_izq, N0, N0, N7, B)                 // {
 ZMK_UNICODE_SINGLE(es_llave_der, N0, N0, N7, D)                 // }
 ZMK_UNICODE_SINGLE(menor_que, N0, N0, N3, C)                    // <
 ZMK_UNICODE_SINGLE(mayor_que, N0, N0, N3, E)                    // >
+ZMK_UNICODE_PAIR(abre_int_ex, N0, N0, B, F, N0, N0, A, N1)        // ¿/¡
