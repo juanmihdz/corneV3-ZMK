@@ -139,26 +139,30 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         combo_code {
             timeout-ms = <50>;
             key-positions = <39 1>;
-            bindings = <&hold LGUI &kp NUMBER_4>;
+            bindings = <&mt LGUI NUMBER_4>;
         };
 
         combo_explorador {
             timeout-ms = <50>;
             key-positions = <39 2>;
-            bindings = <&hold LGUI &kp NUMBER_5>;
+            bindings = <&mt LGUI NUMBER_5>;
         };
 
         combo_discord {
             timeout-ms = <50>;
             key-positions = <39 3>;
-            bindings = <&hold LGUI &kp NUMBER_6>;
+            bindings = <&mt LGUI NUMBER_6>;
         };
 
         combo_brave {
             timeout-ms = <50>;
             key-positions = <39 4>;
-            bindings = <&hold LGUI &kp NUMBER_7>;
+            bindings = <&mt LGUI NUMBER_7>;
         };
+    };
+
+    &soft_off {
+        hold-time-ms = <2000>;
     };
     
     keymap {
@@ -215,14 +219,14 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         };
         // -----------------------------------------------------------------------------------------
         // Layer OPTIONS
-        // | BT_CLR |  BT0  |  BT1  |  BT2  |  BT3  |  BT4   |       | &none  | &none | &none | &none | &none | &none |
-        // | &none  | &none | &none | &none | &none | &none  |       | &none  | &none | &none | &none | &none | &none |
-        // | &none  | &none | &none | &none | &none | &none  |       | &none  | &none | &none | &none | &none | &none |
-        // | &none  | &none | &none | &none | LW/OPT| bootldr|       | bootldr| &none | &none | &none | &none | &none |
+        // | BT_CLR |  BT0  |  BT1  |  BT2  |  BT3  |  BT4   |       | &none  | &none | &none | &none | &none | soft_off |
+        // | &none  | &none | &none | &none | &none | &none  |       | &none  | &none | &none | &none | &none | &none    |
+        // | &none  | &none | &none | &none | &none | &none  |       | &none  | &none | &none | &none | &none | &none    |
+        // | &none  | &none | &none | &none | LW/OPT| bootldr|       | bootldr| &none | &none | &none | &none | &none    |
         // 
         layer_options {
             bindings = <
-                &bt BT_CLR &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4              &none          &none   &none   &none   &none   &none 
+                &bt BT_CLR &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4              &none          &none   &none   &none   &none   &soft_off 
                 &none      &none          &none         &none          &none          &none                     &none          &none   &none   &none   &none   &none
                 &none      &none          &none         &none          &none          &none                     &none          &none   &none   &none   &none   &none
                                                         &none          &tl OPTIONS LOWER &bootloader            &bootloader    &none   &none                                            
