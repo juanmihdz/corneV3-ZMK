@@ -124,7 +124,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         macro1: macro1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LALT &kp F4>;
+            bindings = <&kp LA(F4)>;
         };
         passVeridata: passVeridata {
             compatible = "zmk,behavior-macro";
@@ -161,8 +161,6 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         };
     };
 
-    
-    
     
     keymap {
 
