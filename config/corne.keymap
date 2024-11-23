@@ -133,32 +133,31 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         }; 
     };
 
-    {
-        combos {
-            compatible = "zmk,combos";
-            combo_code {
-                timeout-ms = <50>;
-                key-positions = <39 1>;
-                bindings = <&kp LGUI &kp NUMBER_4>;
-            };
+    
+    combos {
+        compatible = "zmk,combos";
+        combo_code {
+            timeout-ms = <50>;
+            key-positions = <39 1>;
+            bindings = <&kp LGUI &kp NUMBER_4>;
+        };
 
-            combo_explorador {
-                timeout-ms = <50>;
-                key-positions = <39 2>;
-                bindings = <&kp LGUI &kp NUMBER_5>;
-            };
+        combo_explorador {
+            timeout-ms = <50>;
+            key-positions = <39 2>;
+            bindings = <&kp LGUI &kp NUMBER_5>;
+        };
 
-            combo_discord {
-                timeout-ms = <50>;
-                key-positions = <39 3>;
-                bindings = <&kp LGUI &kp NUMBER_6>;
-            };
+        combo_discord {
+            timeout-ms = <50>;
+            key-positions = <39 3>;
+            bindings = <&kp LGUI &kp NUMBER_6>;
+        };
 
-            combo_brave {
-                timeout-ms = <50>;
-                key-positions = <39 4>;
-                bindings = <&kp LGUI &kp NUMBER_7>;
-            };
+        combo_brave {
+            timeout-ms = <50>;
+            key-positions = <39 4>;
+            bindings = <&kp LGUI &kp NUMBER_7>;
         };
     };
     
