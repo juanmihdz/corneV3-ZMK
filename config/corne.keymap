@@ -142,7 +142,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         //                     | ALT | LW/OPT| SPC |       | ENT | LGUI| TD3 |
         default_layer {
             bindings = <
-                &kp TAB &kp Q       &kp W       &kp E       &kp R   &kp T               &kp Y       &kp U       &kp I           &kp O           &kp P       &kp BACKSPACE
+                &kp TAB { wake = <true>; } &kp Q       &kp W       &kp E       &kp R   &kp T               &kp Y       &kp U       &kp I           &kp O           &kp P       &kp BACKSPACE { wake = <true>; }
                 &td0        &kp A       &kp S       &kp D       &kp F   &kp G               &kp H       &kp J       &kp K           &kp L           &kp SEMI    &kp SQT
                 &kp LCTRL   &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       &td1      &td2        &kp SLASH   &kp MINUS
                                                     &kp LALT    &tl OPTIONS LOWER    &kp SPACE           &kp ENTER   &kp LGUI    &td3
