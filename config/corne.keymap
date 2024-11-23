@@ -133,7 +133,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         }; 
     };
 
-    / {
+    {
         combos {
             compatible = "zmk,combos";
             combo_code {
