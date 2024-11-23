@@ -139,25 +139,25 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         combo_code {
             timeout-ms = <50>;
             key-positions = <39 1>;
-            bindings = <&kp LGUI &kp NUMBER_4>;
+            bindings = <&hold LGUI &kp NUMBER_4>;
         };
 
         combo_explorador {
             timeout-ms = <50>;
             key-positions = <39 2>;
-            bindings = <&kp LGUI &kp NUMBER_5>;
+            bindings = <&hold LGUI &kp NUMBER_5>;
         };
 
         combo_discord {
             timeout-ms = <50>;
             key-positions = <39 3>;
-            bindings = <&kp LGUI &kp NUMBER_6>;
+            bindings = <&hold LGUI &kp NUMBER_6>;
         };
 
         combo_brave {
             timeout-ms = <50>;
             key-positions = <39 4>;
-            bindings = <&kp LGUI &kp NUMBER_7>;
+            bindings = <&hold LGUI &kp NUMBER_7>;
         };
     };
     
