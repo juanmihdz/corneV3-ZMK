@@ -164,9 +164,6 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
     
     
     keymap {
-        &soft_off {
-            hold-time-ms = <2000>;
-        };
         
         compatible = "zmk,keymap";
         // Layer Default - QWERTY
