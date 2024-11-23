@@ -161,11 +161,13 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         };
     };
 
-    &soft_off {
-        hold-time-ms = <2000>;
-    };
+    
     
     keymap {
+        &soft_off {
+            hold-time-ms = <2000>;
+        };
+        
         compatible = "zmk,keymap";
         // Layer Default - QWERTY
         // |  TAB  |  Q  |  W  |  E  |   R   |  T  |       |  Y  |  U  |  I  |  O  |  P  |    BKSP  |
@@ -199,13 +201,13 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         // |  FN1  |  FN2  |  FN3  |  FN4  |  FN5  |  FN6 |       |  FN7 |  FN8  |  FN9 | FN10 |  FN11 |  FN12 |
         // | LSHFT | &none | &none | &none | &none | &none|       | &none| &none | `^[  | +*]  |   [   |   ]   |
         // | LCTRL |   <   |   >   | &none | &none | &none|       |  ¿¡  |   \º  | &none|  çÇ  |   {   |   }   |
-        //                         |  ALT  | &none |  SPC |       |  ENT |  RALT | RAISE/LOCK |
+        //                         |  ALT  | &none |ALT+F4|       |  ENT |  RALT | RAISE/LOCK |
         layer_raise {
             bindings = <
-                &kp F1  &kp F2                  &kp F3          &kp F4      &kp F5  &kp F6                  &kp F7          &kp F8  &kp F9     &kp F10     &kp F11   &kp F12
-                &kp LSHFT  &none    &none   &none &none  &none                  &none           &none   &kp LBKT   &kp RBKT    &es_corchete_izq   &es_corchete_der
-                &kp LCTRL  &menor_que                  &mayor_que          &none      &none  &none          &abre_int_ex           &inv_slash   &none   &es_c_cedilla    &es_llave_izq   &es_llave_der
-                                                                &kp LALT    &none  &macro1                 &passVeridata   &kp LGUI  &td3
+                &kp F1  &kp F2          &kp F3      &kp F4  &kp F5  &kp F6              &kp F7          &kp F8  &kp F9     &kp F10     &kp F11   &kp F12
+                &kp LSHFT  &none        &none       &none   &none   &none               &none           &none   &kp LBKT   &kp RBKT    &es_corchete_izq   &es_corchete_der
+                &kp LCTRL  &menor_que   &mayor_que  &none   &none   &none               &abre_int_ex    &inv_slash   &none   &es_c_cedilla    &es_llave_izq   &es_llave_der
+                                                    &kp LALT &none  &macro1             &passVeridata   &kp LGUI  &td3
             >;
         };
 
