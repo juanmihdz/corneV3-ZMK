@@ -35,6 +35,11 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 
 / {
     behaviors {
+        
+        &soft_off {
+            hold-time-ms = <2000>; // Only turn off it the key is held for 5 seconds or longer.
+        };
+
         // Hold-tap behavior
         ht: ht {
             compatible = "zmk,behavior-hold-tap";
@@ -159,10 +164,6 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             key-positions = <38 4>;
             bindings = <&kp LG(NUMBER_7)>;
         };
-    };
-
-    &soft_off {
-        hold-time-ms = <2000>; // Only turn off it the key is held for 5 seconds or longer.
     };
 
     
