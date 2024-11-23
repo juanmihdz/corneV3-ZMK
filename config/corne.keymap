@@ -138,25 +138,25 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         compatible = "zmk,combos";
         combo_code {
             timeout-ms = <50>;
-            key-positions = <39 1>;
+            key-positions = <38 1>;
             bindings = <&kp LG(NUMBER_4)>;
         };
 
         combo_explorador {
             timeout-ms = <50>;
-            key-positions = <39 2>;
+            key-positions = <38 2>;
             bindings = <&kp LG(NUMBER_5)>;
         };
 
         combo_discord {
             timeout-ms = <50>;
-            key-positions = <39 3>;
+            key-positions = <38 3>;
             bindings = <&kp LG(NUMBER_6)>;
         };
 
         combo_brave {
             timeout-ms = <50>;
-            key-positions = <39 4>;
+            key-positions = <38 4>;
             bindings = <&kp LG(NUMBER_7)>;
         };
     };
