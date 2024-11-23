@@ -132,6 +132,35 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             bindings = <&kp CAPSLOCK &kp A &kp B &kp C &kp D &kp CAPSLOCK &kp QUESTION &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4>;
         }; 
     };
+
+    / {
+        combos {
+            compatible = "zmk,combos";
+            combo_code {
+                timeout-ms = <50>;
+                key-positions = <1 39>;
+                bindings = <&kp LGUI &kp NUMBER_4>;
+            };
+
+            combo_explorador {
+                timeout-ms = <50>;
+                key-positions = <2 39>;
+                bindings = <&kp LGUI &kp NUMBER_5>;
+            };
+
+            combo_discord {
+                timeout-ms = <50>;
+                key-positions = <3 39>;
+                bindings = <&kp LGUI &kp NUMBER_6>;
+            };
+
+            combo_brave {
+                timeout-ms = <50>;
+                key-positions = <4 39>;
+                bindings = <&kp LGUI &kp NUMBER_7>;
+            };
+        };
+    };
     
     keymap {
         compatible = "zmk,keymap";
