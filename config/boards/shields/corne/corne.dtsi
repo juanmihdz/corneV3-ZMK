@@ -52,28 +52,10 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9)
     keys {
         compatible = "gpio-keys";
         wakeup_key: wakeup_key {
-            gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Primera columna
+            gpios = <&gpio0 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         };
     };
 
-    behaviors {
-        hw_soft_off: hw_soft_off {
-            compatible = "zmk,behavior-soft-off";
-            #binding-cells = <0>;
-            hold-time-ms = <2000>; // Tiempo que se debe mantener pulsado
-        };
-    };
-
-    wakeup_source: wakeup_source {
-        compatible = "zmk,gpio-key-wakeup-trigger";
-        trigger = <&wakeup_key>;
-        wakeup-source;
-    };
-
-    soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&wakeup_source>;
-    };
 
     // TODO: per-key RGB node(s)?
 };
