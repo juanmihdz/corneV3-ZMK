@@ -15,7 +15,4 @@
         , <&pro_micro 15 GPIO_ACTIVE_HIGH>
         , <&pro_micro 14 GPIO_ACTIVE_HIGH>
         ;
-    
-
-    wakeup-source;
 };
