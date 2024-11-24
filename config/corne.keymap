@@ -116,18 +116,6 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             #binding-cells = <0>;
             hold-time-ms = <2000>; // Tiempo que se debe mantener pulsado
         };
-
-        
-        wakeup_source: wakeup_source {
-            compatible = "zmk,gpio-key-wakeup-trigger";
-            trigger = <&wakeup_key>;
-            wakeup-source;
-        };
-
-        soft_off_wakers {
-            compatible = "zmk,soft-off-wakeup-sources";
-            wakeup-sources = <&wakeup_source>;
-        };
     };
     
     // conditional_layers {
@@ -244,7 +232,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         layer_options {
             bindings = <
                 &bt BT_CLR &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4              &none          &none   &none   &none   &none   &soft_off 
-                &none      &none          &none         &none          &none          &none                     &none          &none   &none   &none   &none   &soft_off_wakers
+                &none      &none          &none         &none          &none          &none                     &none          &none   &none   &none   &none   &none
                 &none      &none          &none         &none          &none          &none                     &none          &none   &none   &none   &none   &none
                                                         &none          &tl OPTIONS LOWER &bootloader            &bootloader    &none   &none                                            
             >;
