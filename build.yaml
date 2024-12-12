@@ -19,7 +19,11 @@
 
 ---
 include:
-  - board: pro_micro
+    
+  - board: nice_nano_v2
+  # - board: pro_micro
     shield: corne_left
-  - board: pro_micro
+    
+  - board: nice_nano_v2
+  # - board: pro_micro
     shield: corne_right
